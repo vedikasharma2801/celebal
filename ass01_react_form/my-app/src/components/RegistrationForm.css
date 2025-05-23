@@ -1,0 +1,169 @@
+/* src/components/RegistrationForm.css */
+.form-container {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  width: 100%;
+  max-width: 650px; /* Slightly wider for a more spacious feel */
+  margin-top: 20px;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #2c3e50; /* A deep, professional blue/grey */
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 1.8em;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Increased spacing */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500; /* Medium weight for labels */
+  color: #34495e; /* Slightly lighter than the title */
+  font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group select {
+  width: 100%;
+  padding: 12px 15px; /* More padding */
+  border: 1px solid #dce4e8; /* Lighter border */
+  border-radius: 6px;
+  font-size: 1em;
+  color: #333;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db; /* Professional blue for focus */
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-group input.input-error,
+.form-group select.input-error {
+  border-color: #e74c3c; /* Standard error color */
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+.form-group input.input-error:focus,
+.form-group select.input-error:focus {
+  border-color: #c0392b; /* Darker error color on focus */
+  box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.2);
+}
+
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.85em;
+  margin-top: 6px;
+  font-weight: 400;
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative; /* For absolute positioning of the button if needed */
+}
+
+.password-wrapper input {
+  flex-grow: 1;
+  /* If button is outside, it needs border-radius on right. If inside, it doesn't. */
+}
+
+.show-hide-btn {
+  padding: 0 12px;
+  height: 46px; /* Match input padding + border */
+  margin-left: -1px; /* Overlap border slightly or adjust as needed */
+  border: 1px solid #dce4e8;
+  border-left: none;
+  background-color: #f8f9fa;
+  color: #555;
+  cursor: pointer;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease;
+}
+.show-hide-btn:hover {
+  background-color: #e9ecef;
+}
+.password-wrapper input:focus + .show-hide-btn {
+  border-color: #3498db; /* Match focus color */
+}
+.password-wrapper input.input-error + .show-hide-btn {
+  border-color: #e74c3c; /* Match error color */
+}
+
+
+.phone-group {
+  display: flex;
+}
+
+.phone-group select {
+  flex: 0 0 150px; /* Give country code a fixed width, adjust as needed */
+  margin-right: 8px; /* Space between select and input */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.phone-group input[type="tel"] {
+  flex-grow: 1;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px; /* Overlap border for seamless look */
+}
+/* Ensure focus states look good for the combined phone group */
+.phone-group select:focus {
+  z-index: 1; /* Bring to front on focus */
+}
+.phone-group input[type="tel"]:focus {
+  z-index: 1; /* Bring to front on focus */
+}
+
+
+.submit-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #3498db; /* Primary action color */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.05em;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+  margin-top: 10px; /* Add some space above the button */
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #2980b9; /* Darker shade on hover */
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(1px); /* Subtle press effect */
+}
+
+.submit-btn:disabled {
+  background-color: #a0cdec; /* Lighter, desaturated blue for disabled state */
+  cursor: not-allowed;
+}
+
+/* Style for disabled dropdowns */
+select:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+  color: #6c757d;
+}

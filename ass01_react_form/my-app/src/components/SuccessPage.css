@@ -1,0 +1,85 @@
+/* src/components/SuccessPage.css */
+.success-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  text-align: center;
+  max-width: 600px;
+  margin: 40px auto;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.success-container h2 {
+  color: #27ae60; /* A positive green color */
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 2em;
+}
+.success-container h2::before { /* Optional: Add a checkmark icon effect */
+  content: '✔ ';
+  margin-right: 8px;
+}
+
+.success-container p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: 1.1em;
+}
+
+.details-card {
+  background-color: #f8f9fa; /* Lighter background for the card */
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.detail-item {
+  margin-bottom: 12px;
+  font-size: 1em;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e0e0e0; /* Subtle separator */
+}
+.detail-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.detail-item strong {
+  color: #2c3e50; /* Dark blue/grey for keys */
+  font-weight: 500;
+  margin-right: 8px;
+  min-width: 120px; /* Align values somewhat */
+  display: inline-block;
+}
+
+.back-button {
+  padding: 12px 25px;
+  background-color: #3498db; /* Consistent with form submit */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none; /* If it were an <a> tag */
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.back-button:hover {
+  background-color: #2980b9;
+}
+
+.back-button:active {
+  transform: translateY(1px);
+}
