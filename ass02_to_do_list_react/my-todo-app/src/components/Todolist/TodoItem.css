@@ -1,0 +1,88 @@
+/* src/components/TodoList/TodoItem.css */
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px; /* More vertical padding */
+  border-bottom: 1px solid #e9ecef; /* Lighter separator */
+  list-style-type: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.todo-item:hover {
+  background-color: #f8f9fa; /* Subtle hover effect */
+}
+
+.todo-item.completed .task-text {
+  text-decoration: line-through;
+  color: #868e96; /* Lighter, muted color for completed text */
+  font-style: italic;
+}
+
+/* Custom checkbox styling (optional but nice) */
+.todo-item input[type="checkbox"] {
+  appearance: none; /* Remove default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #adb5bd; /* Gray border */
+  border-radius: 4px;
+  margin-right: 15px; /* More space next to text */
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.todo-item input[type="checkbox"]:checked {
+  background-color: #007bff; /* Blue background when checked */
+  border-color: #007bff;
+}
+
+/* Custom checkmark for the checkbox */
+.todo-item input[type="checkbox"]:checked::before {
+  content: '✔'; /* Checkmark character */
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1; /* Ensure proper vertical alignment */
+}
+
+
+.task-text {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 1.05rem; /* Slightly larger task text */
+  word-break: break-word; /* Prevent long text from overflowing */
+}
+
+.remove-btn {
+  background-color: transparent; /* Transparent background */
+  color: #dc3545; /* Red color for text/icon */
+  border: 1px solid transparent; /* Maintain layout, transparent border */
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-left: 10px; /* Space from task text */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.remove-btn:hover {
+  background-color: #f8d7da; /* Light red background on hover */
+  color: #721c24; /* Darker red text on hover */
+  border-color: #f5c6cb; /* Subtle border on hover */
+}
+
+.remove-btn:active {
+  background-color: #f1b0b7;
+  color: #721c24;
+}

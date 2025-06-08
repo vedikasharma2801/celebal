@@ -1,0 +1,35 @@
+/* src/App.css */
+.App {
+  background-color: #ffffff;
+  padding: 30px 40px; /* Increased padding */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Softer, more pronounced shadow */
+  width: 100%;
+  max-width: 650px; /* Slightly wider for better content fit */
+  text-align: center;
+  margin: 0 15px; /* Add horizontal margin for smaller screens */
+}
+
+.App-header {
+  margin-bottom: 30px; /* More space below header */
+}
+
+.App-header h1 {
+  color: #2c3e50; /* Dark, professional blue-gray */
+  margin: 0;
+  font-size: 2.5em; /* Larger title */
+  font-weight: 600;
+}
+
+main {
+  text-align: left; /* Align content inside main to the left */
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef; /* Subtle separator */
+  font-size: 0.85em;
+  color: #868e96; /* Lighter gray for footer */
+  text-align: center;
+}

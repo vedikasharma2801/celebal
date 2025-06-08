@@ -1,0 +1,115 @@
+/* src/components/TodoList/TodoList.css */
+.todo-list-container {
+  /* No specific background/shadow needed here if App.css handles it */
+  /* Just ensure it takes full width of its parent main area */
+}
+
+.add-task-form {
+  display: flex;
+  margin-bottom: 25px; /* More space after the form */
+  gap: 10px; /* Space between input and button */
+}
+
+.add-task-form input[type="text"] {
+  flex-grow: 1;
+  padding: 12px 15px; /* Increased padding */
+  border: 1px solid #ced4da; /* Softer border */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.add-task-form input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff; /* Standard Bootstrap blue for focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.add-task-form button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none; /* Remove border, bg is enough */
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+  white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.add-task-form button:hover {
+  background-color: #0056b3;
+}
+
+.add-task-form button:active {
+  background-color: #004085;
+}
+
+.error-message {
+  color: #dc3545; /* Standard Bootstrap danger color */
+  background-color: #f8d7da; /* Light red background for error */
+  border: 1px solid #f5c6cb;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  margin-top: -15px; /* Pull up slightly */
+  margin-bottom: 20px;
+  text-align: left; /* Ensure text is left aligned */
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px; /* Increased gap for better spacing */
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef; /* Subtle separator */
+}
+
+.filter-controls, .sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between label and select */
+}
+
+.controls label {
+  font-size: 0.95em; /* Slightly larger label */
+  color: #495057; /* Darker gray for labels */
+  font-weight: 500;
+}
+
+.controls select {
+  padding: 8px 12px; /* Comfortable padding */
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.controls select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.tasks-list {
+  padding-left: 0;
+  margin-top: 0;
+  list-style-type: none; /* Ensure no bullets if not already set */
+}
+
+.empty-state {
+  text-align: center;
+  color: #6c757d; /* Bootstrap muted color */
+  padding: 30px 15px;
+  font-size: 1.1em;
+  font-style: italic;
+  background-color: #f8f9fa; /* Very light gray background */
+  border-radius: 6px;
+  border: 1px dashed #ced4da; /* Dashed border for distinction */
+}
