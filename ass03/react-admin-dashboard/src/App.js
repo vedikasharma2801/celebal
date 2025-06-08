@@ -4,14 +4,13 @@ import { Routes, Route } from "react-router-dom";
 import Topbar from "./components/Topbar";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Orders from "./pages/Orders/Orders";
-import Employees from "./pages/Employees/Employees";
-import Customers from "./pages/Customers/Customers";
 import Kanban from "./pages/Kanban/Kanban";
 import Calendar from "./pages/Calendar/Calendar";
 import Bar from "./pages/Bar/Bar";
 import Line from "./pages/Line/Line";
 import Pie from "./pages/Pie/Pie";
+import Users from "./pages/Users/Users";
+import UserDetail from "./pages/Users/UserDetail"; // NEW: Import UserDetail
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -22,13 +21,12 @@ function App() {
         <CssBaseline />
         <div className="app">
           <Sidebar />
-          <main className="content" style={{width: "100%"}}>
+          <main className="content" style={{ width: "100%" }}>
             <Topbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/employees" element={<Employees />} />
-              <Route path="/customers" element={<Customers />} />
+              <Route path="/users" element={<Users />} />
+              <Route path="/users/:userId" element={<UserDetail />} /> {/* NEW: Add dynamic route */}
               <Route path="/kanban" element={<Kanban />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/bar" element={<Bar />} />
