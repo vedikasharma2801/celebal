@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# React Admin Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive and interactive admin dashboard built with React.js. This project features a modern UI using Material-UI, a custom theming engine for light/dark modes, and a suite of tools for data visualization and task management.
 
-## Available Scripts
+## Screenshots
 
-In the project directory, you can run:
+**Dashboard Overview (Dark Mode)**
+![alt text](image.png)
+**Dashboard Overview (Light Mode)**
+![alt text](image-1.png)
 
-### `npm start`
+**Users Page (Dark Mode)**
+![alt text](image-2.png)
+**User's Profile Page (Dark Mode)**
+![alt text](image-3.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Calendar Page (Dark Mode)**
+![alt text](image-4.png)
+**Kanban Page (Dark Mode)**
+![alt text](image-5.png)
 
-### `npm test`
+**Bar Chart Page (Light Mode)**
+![alt text](image-6.png)
+**Pie Chart Page (Light Mode)**
+![alt text](image-7.png)
+**Line Chart Page (Light Mode)**
+![alt text](image-8.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Key Features
 
-### `npm run build`
+-   **Customizable Theming:** Easily switch between a sleek **dark mode** and a clean **light mode**. The theme is managed via React Context and persists across sessions.
+-   **Interactive Dashboard:** Features dynamic stat boxes that open modals to display detailed data (e.g., list of users, tasks).
+-   **User Management (CRUD):** A dedicated "Users" page where an admin can:
+    -   View all users in a searchable, filterable data grid.
+    -   Add new users via a modal form.
+    -   Delete existing users.
+-   **Detailed User View:** Click on any user to navigate to a detailed profile page, showing their assigned tasks and key statistics.
+-   **Task Assignment:** Admins can assign unassigned tasks to specific users directly from the user detail page.
+-   **Interactive Calendar:** A full-featured calendar that displays all tasks by their due dates. Admins can also add and delete events directly on the calendar.
+-   **Multi-Column Kanban Board:** A drag-and-drop Kanban board to visualize task workflow across "To Do," "In Progress," and "Done" columns.
+-   **Data Visualization:** Includes three types of charts powered by Nivo:
+    -   **Bar Chart:** Visualizing tasks completed per month.
+    -   **Pie Chart:** Showing the distribution of tasks by status.
+    -   **Line Chart:** Tracking monthly user growth.
+-   **Data Persistence:** Application state (users and tasks) is saved to `localStorage`, so your data persists even after a browser refresh.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   **Framework:** React 18
+-   **UI Library:** Material-UI (MUI) v5
+-   **Routing:** React Router v6
+-   **Charts:** Nivo
+-   **Drag & Drop:** Dnd-Kit (for the Kanban board)
+-   **Calendar:** FullCalendar
+-   **State Management:** React Context API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You will need to have Node.js and npm installed on your machine.
+-   [Node.js](https://nodejs.org/) (v18.x or later recommended)
+-   npm (comes bundled with Node.js)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repository-url>
+    ```
 
-## Learn More
+2.  **Navigate to the project directory:**
+    ```bash
+    cd react-admin-dashboard
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3.  **Install the dependencies:**
+    ```bash
+    npm install
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Running the Application
 
-### Code Splitting
+Once the installation is complete, you can start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm start
