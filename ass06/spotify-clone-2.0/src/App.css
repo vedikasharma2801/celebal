@@ -1,0 +1,15 @@
+/* ... keep all previous styles ... */
+/* Add/update these styles */
+.main-layout {
+  display: flex;
+  flex: 1; 
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+  padding-bottom: 90px; /* Space for the player */
+  box-sizing: border-box;
+}

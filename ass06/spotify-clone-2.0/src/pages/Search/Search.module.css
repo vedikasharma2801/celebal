@@ -1,0 +1,103 @@
+.searchPage {
+    background: linear-gradient(to bottom, #222, #121212);
+    height: 100%;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.header {
+    padding: 16px 32px;
+    background-color: rgba(10, 10, 10, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    border-radius: 500px;
+    padding: 10px 16px;
+    width: 100%;
+    max-width: 360px;
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.searchBar:focus-within {
+    border-color: #fff;
+}
+
+.searchBar svg {
+    color: #b3b3b3;
+}
+
+.searchBar input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    margin-left: 12px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+}
+.searchBar input:focus {
+    outline: none;
+}
+
+.content {
+    padding: 16px 32px;
+}
+
+.browseHeader {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.categoryGrid, .resultsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+}
+
+.categoryCard {
+    height: 190px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.categoryCard:hover {
+    transform: scale(1.03);
+}
+
+.categoryCard h3 {
+    font-size: 22px;
+    padding: 16px;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.categoryCard img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transform: rotate(25deg) translate(18%, -2%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.noResults {
+    color: #b3b3b3;
+    text-align: center;
+    padding: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}

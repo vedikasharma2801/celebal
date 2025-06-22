@@ -1,0 +1,87 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: rgba(10, 10, 10, 0.7); /* Semi-transparent */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navButtons {
+    display: flex;
+    gap: 8px;
+}
+
+.navButtons button {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.searchBar {
+    display: none; /* Hidden on mobile by default */
+}
+
+/* Show search bar on larger screens */
+@media (min-width: 768px) {
+    .searchBar {
+        display: flex;
+        align-items: center;
+        background-color: #242424;
+        border-radius: 20px;
+        padding: 8px 12px;
+        width: 360px;
+    }
+    .searchBar input {
+        background: transparent;
+        border: none;
+        color: #fff;
+        margin-left: 8px;
+        width: 100%;
+    }
+    .searchBar input:focus {
+        outline: none;
+    }
+}
+
+.userButtons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.userButtons button {
+    border-radius: 20px;
+    padding: 8px 24px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+
+.signUp {
+    background-color: transparent;
+    color: #a7a7a7;
+}
+
+.signUp:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.logIn {
+    background-color: #fff;
+    color: #000;
+}
+
+.logIn:hover {
+    transform: scale(1.05);
+}
