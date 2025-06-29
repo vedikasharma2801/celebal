@@ -99,7 +99,6 @@ Shazam Core API (RapidAPI)
 Vite
 
 ## 📸 Screenshots
-(Add your own screenshots in the screenshots/ folder if you like)
 ![alt text](photo01.png)
 
 ![alt text](photo02.png)
