@@ -91,6 +91,24 @@ Follow these instructions to get a copy of the project up and running on your lo
     # Install dependencies
     npm install
     ```
+### Seed the Database
+    ```sh
+    #Run this command from inside the 'backend' folder
+    npm run data:import
+    ```
+
+### Running the Application
+
+1.  **Terminal 1: Run the Backend Server (from the backend directory)**
+    ```sh
+    npm run dev
+    ```
+    Your backend API will be running on http://localhost:5000.
+2.  **Terminal 2: Run the Frontend Server (from the frontend directory)**
+    ```sh
+    npm run dev
+    ```
+    Your React application will be running on http://localhost:5173 (or another port if 5173 is busy).
 
 ### Environment Variables
 
@@ -113,21 +131,3 @@ MONGO_URI=mongodb://127.0.0.1:27017/e-commerce
 # Use a long, random string for security
 JWT_SECRET=yourrandomsecretstring12345
 
-### Seed the Database
-```sh
-    # Run this command from inside the 'backend' folder
-    npm run data:import
-    ```
-
-### Running the Application
-
-1.  **Terminal 1: Run the Backend Server (from the backend directory)**
-    ```sh
-    npm run dev
-    ```
-    Your backend API will be running on http://localhost:5000.
-2.  **Terminal 2: Run the Frontend Server (from the frontend directory)*
-    ```sh
-    npm run dev
-    ```
-    Your React application will be running on http://localhost:5173 (or another port if 5173 is busy).
