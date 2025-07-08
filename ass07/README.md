@@ -97,14 +97,18 @@ Follow these instructions to get a copy of the project up and running on your lo
     npm run data:import
     ```
 
-### Running the Application
+### 🚀Running the Application
 
 1.  **Terminal 1: Run the Backend Server (from the backend directory)**
+
     ```sh
     npm run dev
     ```
     Your backend API will be running on http://localhost:5000.
+
+
 2.  **Terminal 2: Run the Frontend Server (from the frontend directory)**
+
     ```sh
     npm run dev
     ```

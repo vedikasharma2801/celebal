@@ -1,4 +1,3 @@
-// frontend/src/main.jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
@@ -7,29 +6,45 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import { Provider } from 'react-redux'; // <-- Import Provider
-import store from './store'; // <-- Import the store
+import { Provider } from 'react-redux';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
+import store from './store';
 import App from './App.jsx';
+
+// Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+
+// Core Components
+import PrivateRoute from './components/PrivateRoute';
+
+// Pages
 import HomePage from './pages/HomePage.jsx';
 import ProductPage from './pages/ProductPage.jsx';
 import CartPage from './pages/CartPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import PrivateRoute from './components/PrivateRoute'; // <-- IMPORT
-import ShippingPage from './pages/ShippingPage'; 
+import ShippingPage from './pages/ShippingPage';
+import PaymentPage from './pages/PaymentPage';
+import PlaceOrderPage from './pages/PlaceOrderPage';
+import OrderPage from './pages/OrderPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
+      {/* Public Routes */}
       <Route index={true} path="/" element={<HomePage />} />
       <Route path="/product/:id" element={<ProductPage />} />
-      <Route path="/cart" element={<CartPage />} /> 
+      <Route path="/cart" element={<CartPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route path='' element={<PrivateRoute />}>
-        <Route path='/shipping' element={<ShippingPage />} />
+
+      {/* Private (User must be logged in) */}
+      <Route path="" element={<PrivateRoute />}>
+        <Route path="/shipping" element={<ShippingPage />} />
+        <Route path="/payment" element={<PaymentPage />} />
+        <Route path="/placeorder" element={<PlaceOrderPage />} />
+        <Route path="/order/:id" element={<OrderPage />} />
       </Route>
     </Route>
   )
@@ -37,9 +52,10 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* Wrap the app in the Provider */}
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <PayPalScriptProvider deferLoading={true}>
+        <RouterProvider router={router} />
+      </PayPalScriptProvider>
     </Provider>
   </React.StrictMode>
 );
