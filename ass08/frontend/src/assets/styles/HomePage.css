@@ -1,0 +1,116 @@
+/* frontend/src/assets/styles/HomePage.css */
+
+.landing-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Make it take up the full browser height, subtracting the navbar height */
+  min-height: calc(100vh - 76px); 
+  margin-top: 0.0rem; /* Adjust to pull it up against the navbar */
+  margin-bottom: 4rem;
+  padding: 1rem;
+  color: #2c2c2c; /* A slightly softer black for text */
+  background-image: url('/images/bg7.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+/* We are removing the white overlay by deleting the ::before pseudo-element */
+
+.landing-left,
+.slideshow-container {
+  /* No z-index needed anymore without the overlay */
+  position: relative; 
+}
+
+.landing-left {
+  padding-right: 3rem;
+  animation: fadeIn 1s ease-in-out;
+  /* Add a subtle backdrop for readability if background is busy */
+  background-color: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Updated brand name text for the new location */
+.brand-name {
+  font-size: 1.2rem;
+  color: #d19a9a; /* A more prominent dusty rose */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.landing-left h1 {
+  font-family: 'Georgia', 'serif';
+  font-size: 4rem;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 1rem 0;
+  color: #212121;
+}
+
+.landing-left p {
+  font-size: 1.1rem;
+  color: #454545; /* Darker gray for better contrast */
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+.get-started-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.get-started-btn:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Slideshow remains the same */
+.slideshow-container {
+  height: 60vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Add shadow to lift it off the background */
+}
+
+.image-scroller {
+  display: flex;
+  flex-direction: column;
+  animation: scrollUp 25s linear infinite;
+}
+
+.image-scroller img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.slideshow-container:hover .image-scroller {
+  animation-play-state: paused;
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

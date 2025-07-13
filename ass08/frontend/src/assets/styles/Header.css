@@ -1,0 +1,71 @@
+/* frontend/src/assets/styles/Header.css */
+
+/* --- Main Navbar Styling --- */
+.navbar {
+  background-color: #f8f5f2 !important; /* A soft, warm off-white/beige */
+  padding: 1rem 0;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Add a subtle shadow on scroll (we'll add JS for this later if needed) */
+.navbar-scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Brand Name Styling --- */
+.navbar-brand {
+  font-family: 'Playfair Display', serif; /* Use our elegant custom font */
+  font-size: 1.8rem !important;
+  font-weight: 700 !important; /* Bold */
+  color: #3a3a3a !important; /* A dark, soft charcoal color */
+  letter-spacing: 1px;
+}
+
+/* --- Nav Link Styling (Cart, Profile) --- */
+.nav-link {
+  color: #555 !important; /* Softer gray for links */
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-dropdown-item:hover {
+  color: #000 !important;
+}
+
+/* --- Search Box Styling --- */
+.search-box .form-control {
+  border-radius: 20px; /* Rounded search bar */
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.search-box .form-control:focus {
+  border-color: #bfa8a8; /* Highlight with brand accent color */
+  box-shadow: 0 0 0 2px rgba(191, 168, 168, 0.2);
+}
+
+.search-box .btn {
+  border-radius: 20px !important;
+  background-color: #3a3a3a; /* Match brand text color */
+  border: none;
+  color: white;
+}
+.search-box .btn:hover {
+  background-color: #000;
+}
+
+/* --- User Dropdown Styling --- */
+.dropdown-toggle::after {
+  display: none !important; /* Hide default dropdown arrow for a cleaner look */
+}
+
+.nav-dropdown a {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}

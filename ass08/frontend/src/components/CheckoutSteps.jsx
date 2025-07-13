@@ -9,17 +9,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
   return (
     <Nav className="justify-content-center mb-4">
       {/* --- Step 1: Sign In --- */}
-      <Nav.Item>
-        {step1 ? (
-          // THE FIX: Instead of wrapping with <LinkContainer>,
-          // we tell Nav.Link to render "as" a React Router <Link>.
-          <Nav.Link as={Link} to="/login">
-            Sign In
-          </Nav.Link>
-        ) : (
-          <Nav.Link disabled>Sign In</Nav.Link>
-        )}
-      </Nav.Item>
+      
 
       {/* --- Step 2: Shipping --- */}
       <Nav.Item>
