@@ -1,18 +1,18 @@
-// frontend/src/slices/ordersApiSlice.js
-
 import { apiSlice } from './apiSlice';
-import { ORDERS_URL, PAYPAL_URL } from '../constants/constants';
+import { ORDERS_URL } from '../constants/constants';
 
 export const ordersApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
+    // Mutation to create a new order
     createOrder: builder.mutation({
       query: (order) => ({
         url: ORDERS_URL,
         method: 'POST',
         body: { ...order },
       }),
-    }), // <--- COMMA ADDED HERE
+    }),
 
+    // Query to get a single order's details
     getOrderDetails: builder.query({
       query: (orderId) => ({
         url: `${ORDERS_URL}/${orderId}`,
@@ -20,6 +20,7 @@ export const ordersApiSlice = apiSlice.injectEndpoints({
       keepUnusedDataFor: 5,
     }),
 
+    // Mutation to update an order's payment status
     payOrder: builder.mutation({
       query: ({ orderId, details }) => ({
         url: `${ORDERS_URL}/${orderId}/pay`,
@@ -27,20 +28,29 @@ export const ordersApiSlice = apiSlice.injectEndpoints({
         body: { ...details },
       }),
     }),
+    
+    // Mutation to create a Stripe payment intent
+    createStripePaymentIntent: builder.mutation({
+      query: (orderId) => ({
+        url: `${ORDERS_URL}/${orderId}/create-stripe-payment-intent`,
+        method: 'POST',
+      }),
+    }),
 
-    getPaypalClientId: builder.query({
+    getMyOrders: builder.query({
       query: () => ({
-        url: PAYPAL_URL,
+        url: `${ORDERS_URL}/myorders`,
       }),
       keepUnusedDataFor: 5,
     }),
   }),
 });
 
-// This line should now work correctly as all endpoints are defined properly
+// Export all the auto-generated hooks
 export const {
   useCreateOrderMutation,
   useGetOrderDetailsQuery,
   usePayOrderMutation,
-  useGetPaypalClientIdQuery,
+  useCreateStripePaymentIntentMutation,
+  useGetMyOrdersQuery, 
 } = ordersApiSlice;

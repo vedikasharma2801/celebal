@@ -65,11 +65,11 @@ const ProductPage = () => {
                 <h3>{product.name}</h3>
               </ListGroup.Item>
               <ListGroup.Item>
-                Rating: {product.rating} from {product.numReviews} reviews
+                <b>Rating:</b> {product.rating} from {product.numReviews} reviews
               </ListGroup.Item>
-              <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+              <ListGroup.Item><b>Price:</b> ${product.price}</ListGroup.Item>
               <ListGroup.Item>
-                Description: {product.description}
+                <b>Description:</b> {product.description}
               </ListGroup.Item>
             </ListGroup>
           </Col>
