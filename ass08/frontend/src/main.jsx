@@ -13,7 +13,8 @@ import App from './App.jsx';
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
+// import './index.css';
+import './assets/styles/index.css'; 
 
 // Core Components
 import PrivateRoute from './components/PrivateRoute';
@@ -45,6 +46,7 @@ const router = createBrowserRouter(
         <Route path="/payment" element={<PaymentPage />} />
         <Route path="/placeorder" element={<PlaceOrderPage />} />
         <Route path="/order/:id" element={<OrderPage />} />
+        <Route path="/search/:keyword" element={<HomePage />} />
       </Route>
     </Route>
   )

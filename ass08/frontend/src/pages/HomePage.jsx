@@ -3,9 +3,12 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Product from '../components/Product';
 import { useGetProductsQuery } from '../slices/productsApiSlice';
+import ProductCarousel from '../components/ProductCarousel';
+import { useParams } from 'react-router-dom';
 
 const HomePage = () => {
-  const { data: products, isLoading, error } = useGetProductsQuery();
+  const { keyword } = useParams();
+  const { data: products, isLoading, error } = useGetProductsQuery({ keyword });
 
   return (
     <>
@@ -15,6 +18,8 @@ const HomePage = () => {
         <div>{error?.data?.message || error.error}</div>
       ) : (
         <>
+          <ProductCarousel />
+          <h1>Featured Products</h1>
           <h1>Latest Products</h1>
           <Row>
             {products.map((product) => (
