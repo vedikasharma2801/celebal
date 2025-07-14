@@ -17,7 +17,8 @@ Product Page
 
 ![alt text](frontend/src/assets/images/ItemDetail.png)
 
-Landing Page	
+Landing Page
+
 ![alt text](frontend/src/assets/images/landingPage.png)
 
 Search
@@ -30,7 +31,7 @@ Shopping Cart
 
 Login Page
 
-![alt text](frontend/src/assets/images/signInPage.png)
+![alt text](frontend/src/assets/images/sigInPage.png)
 
 Shipping Page	
 
