@@ -10,7 +10,7 @@ Here is a gallery of the key pages in the application.
 
 | Homepage | Product Details |
 | :---: | :---: |
-| ![Homepage](./frontend/assests/images/homepage.png) | ![Product Details](assests/images/ItemDetail.png) |
+| ![Homepage](celebal\ass08\frontend\src\assets\images\Homepage.png) | ![Product Details](assests/images/ItemDetail.png) |
 | **Shopping Cart** | **Login Page** |
 | ![Shopping Cart](screenshots/cart-page.png) | ![Login Page](screenshots/login-page.png) |
 | **Shipping Page** | **Payment Page** |
