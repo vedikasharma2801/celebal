@@ -69,11 +69,13 @@ You will need to have Node.js and npm installed on your machine.
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/vedikasharma2801/celebal
     ```
 
 2.  **Navigate to the project directory:**
     ```bash
+    cd celebal
+    cd ass03
     cd react-admin-dashboard
     ```
 

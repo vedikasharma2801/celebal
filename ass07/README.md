@@ -8,14 +8,34 @@ A full-featured e-commerce web application built from the ground up using the ME
 
 Here is a gallery of the key pages in the application.
 
-| Homepage | Product Details |
-| :---: | :---: |
-| ![Homepage](screenshots/homepage.png) | ![Product Details](screenshots/product-page.png) |
-| **Shopping Cart** | **Login Page** |
-| ![Shopping Cart](screenshots/cart-page.png) | ![Login Page](screenshots/login-page.png) |
-| **Shipping Page** | **Payment Page** |
-| ![Shipping Page](screenshots/shipping-page.png) | ![Payment Page](screenshots/payment-page.png) |
+Homepage	
 
+![alt text](frontend/src/assets/images/Homepage.png)
+
+Product Page
+
+![alt text](frontend/src/assets/images/ItemDetail.png)
+
+Landing Page
+
+![alt text](frontend/src/assets/images/landingPage.png)
+
+Shopping Cart	
+
+![alt text](frontend/src/assets/images/CartPage.png)
+
+Login Page
+
+![alt text](frontend/src/assets/images/sigInPage.png)
+
+Shipping Page	
+
+![alt text](frontend/src/assets/images/ShippingPage.png)
+![alt text](frontend/src/assets/images/OrderSummary.png)
+
+Payment Page
+
+![alt text](frontend/src/assets/images/PaymentMethod.png)
 
 ---
 
@@ -66,8 +86,9 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 1.  **Clone the repository**
     ```sh
-    git clone https://github.com/YourUsername/mern-ecommerce-project.git
-    cd mern-ecommerce-project
+    git clone https://github.com/vedikasharma2801/celebal.git
+    cd celebal
+    cd ass07
     ```
 
 2.  **Setup Backend**

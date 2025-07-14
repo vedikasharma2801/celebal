@@ -75,10 +75,10 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 1.  **Clone the repository (or download the source code):**
     ```bash
-    git clone <your-repository-url>
-    cd my-react-form
+    git clone https://github.com/vedikasharma2801/celebal
+    cd celebal
+    cd ass01_react_form
     ```
-    (If you downloaded a ZIP, extract it and navigate into the project folder.)
 
 2.  **Install dependencies:**
     Open your terminal in the project root and run:

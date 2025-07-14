@@ -55,12 +55,14 @@ You need to have Node.js and npm installed on your machine.
 
 1.  **Clone the repository**
     ```sh
-    git clone https://github.com/your-username/spotify-clone.git
+    git clone https://github.com/vedikasharma2801/celebal.git
     ```
 
 2.  **Navigate to the project directory**
     ```sh
-    cd spotify-clone
+    cd celebal
+    cd ass05
+    cd spotify-clone-2.0
     ```
 
 3.  **Install NPM packages**

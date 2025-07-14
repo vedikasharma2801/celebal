@@ -65,8 +65,10 @@ src/
 1️⃣ **Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/vedikasharma2801/celebal.git
+cd celebal
+cd ass06
+cd Viber
 ```
 
 2️⃣ **Install dependencies**
