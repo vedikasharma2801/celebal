@@ -10,10 +10,13 @@ It is a clothing store platform where users can browse through various products,
 Here is a gallery of the key pages in the application.
 
 Homepage	Product Details
-![alt text](frontend/src/assets/images/landing page.png)
 ![alt text](frontend/src/assets/images/Homepage.png)
 ![alt text](frontend/src/assets/images/ItemDetail.png)
+
+Landing Page	Search
+![alt text](frontend/src/assets/images/landing page.png)
 ![alt text](frontend/src/assets/images/Search.png)
+
 Shopping Cart	Login Page
 ![alt text](frontend/src/assets/images/CartPage.png)
 ![alt text](frontend/src/assets/images/signInPage.png)
@@ -98,9 +101,10 @@ Follow these instructions to get a copy of the project up and running on your lo
     # Install dependencies
     npm install
     ```
-### Seed the Database
+3. **Seed the Database**
+
     ```sh
-    #Run this command from inside the 'backend' folder
+    # Run this command from inside the 'backend' folder
     npm run data:import
     ```
 
