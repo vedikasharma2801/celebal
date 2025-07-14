@@ -1,22 +1,28 @@
-# MERN E-Commerce Platform
+# SOFTHUE Platform
 
 A full-featured e-commerce web application built from the ground up using the MERN (MongoDB, Express, React, Node.js) stack. This project includes core functionalities such as user authentication, product browsing, a shopping cart, and a complete checkout process.
 
+It is a clothing store platform where users can browse through various products, add them to their cart, and checkout securely.
 ---
 
 ## 📸 Screenshots
 
 Here is a gallery of the key pages in the application.
 
-| Homepage | Product Details |
-| :---: | :---: |
-| ![Homepage](celebal\ass08\frontend\src\assets\images\Homepage.png) | ![Product Details](assests/images/ItemDetail.png) |
-| **Shopping Cart** | **Login Page** |
-| ![Shopping Cart](screenshots/cart-page.png) | ![Login Page](screenshots/login-page.png) |
-| **Shipping Page** | **Payment Page** |
-| ![Shipping Page](screenshots/shipping-page.png) | ![Payment Page](screenshots/payment-page.png) |
-
-
+Homepage	Product Details
+![alt text](frontend/src/assets/images/landing page.png)
+![alt text](frontend/src/assets/images/Homepage.png)
+![alt text](frontend/src/assets/images/ItemDetail.png)
+![alt text](frontend/src/assets/images/Search.png)
+Shopping Cart	Login Page
+![alt text](frontend/src/assets/images/CartPage.png)
+![alt text](frontend/src/assets/images/signInPage.png)
+Shipping Page	Payment Page
+![alt text](frontend/src/assets/images/OrderSummary.png)
+![alt text](frontend/src/assets/images/ShippingPage.png)
+![alt text](frontend/src/assets/images/PaymentMethod.png)
+![alt text](frontend/src/assets/images/AfterpaymentStripe.png)
+![alt text](frontend/src/assets/images/afterOrderCOD.png)
 ---
 
 ## ✨ Features
@@ -66,8 +72,9 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 1.  **Clone the repository**
     ```sh
-    git clone https://github.com/YourUsername/mern-ecommerce-project.git
-    cd mern-ecommerce-project
+    git clone https://github.com/vedikasharma2801/celebal.git
+    cd celebal
+    cd ass08
     ```
 
 2.  **Setup Backend**
@@ -134,4 +141,10 @@ MONGO_URI=mongodb://127.0.0.1:27017/e-commerce
 # --- JWT Secret ---
 # Use a long, random string for security
 JWT_SECRET=yourrandomsecretstring12345
+
+# --- PAYPAL_CLIENT_ID ---
+PAYPAL_CLIENT_ID=yourkey
+
+# --- STRIPE_SECRET_KEY ---
+STRIPE_SECRET_KEY=yourkey
 
