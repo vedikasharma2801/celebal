@@ -1,4 +1,4 @@
-# SOFTHUE Platform
+# SOFTHUE 
 
 A full-featured e-commerce web application built from the ground up using the MERN (MongoDB, Express, React, Node.js) stack. This project includes core functionalities such as user authentication, product browsing, a shopping cart, and a complete checkout process.
 
@@ -9,22 +9,40 @@ It is a clothing store platform where users can browse through various products,
 
 Here is a gallery of the key pages in the application.
 
-Homepage	Product Details
+Homepage	
+
 ![alt text](frontend/src/assets/images/Homepage.png)
+
+Product Page
+
 ![alt text](frontend/src/assets/images/ItemDetail.png)
 
-Landing Page	Search
-![alt text](frontend/src/assets/images/landing page.png)
+Landing Page	
+![alt text](frontend/src/assets/images/landingPage.png)
+
+Search
+
 ![alt text](frontend/src/assets/images/Search.png)
 
-Shopping Cart	Login Page
+Shopping Cart	
+
 ![alt text](frontend/src/assets/images/CartPage.png)
+
+Login Page
+
 ![alt text](frontend/src/assets/images/signInPage.png)
-Shipping Page	Payment Page
-![alt text](frontend/src/assets/images/OrderSummary.png)
+
+Shipping Page	
+
 ![alt text](frontend/src/assets/images/ShippingPage.png)
+![alt text](frontend/src/assets/images/OrderSummary.png)
+
+Payment Page
+
 ![alt text](frontend/src/assets/images/PaymentMethod.png)
+
 ![alt text](frontend/src/assets/images/AfterpaymentStripe.png)
+
 ![alt text](frontend/src/assets/images/afterOrderCOD.png)
 ---
 
